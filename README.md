@@ -1,5 +1,9 @@
 Web App Deployment to Amazon ECR
+
+
 This project demonstrates deploying a containerized web application to Amazon Elastic Container Registry (ECR) using Jenkins, Docker, SonarQube, Trivy, and AWS CLI.
+
+
 
 Features
 Automated CI/CD pipeline using Jenkins.
@@ -45,15 +49,18 @@ Clone this repository:
 bash
 Copy
 Edit
-git clone https://github.com/Pepuhove/web_app_containerised.git
-cd web_app_containerised
+git clone https://github.com/Pepuhove/Web App Deployment to Amazon ECR.git
+cd wWeb App Deployment to Amazon ECR
+
 Configure Jenkins with the provided Jenkinsfile.
 Trigger the Jenkins job and monitor the pipeline stages.
 Project Structure
 bash
 Copy
 Edit
-web_app_containerised/
+
+
+Web App Deployment to Amazon ECR/
 ├── Jenkinsfile         # CI/CD pipeline definition
 ├── Dockerfile          # Docker build instructions
 ├── package.json        # Node.js dependencies
