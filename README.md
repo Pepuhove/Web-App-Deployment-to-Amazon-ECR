@@ -1,11 +1,12 @@
-Web App Deployment to Amazon ECR
+**Web App Deployment to Amazon ECR**
 
 
 This project demonstrates deploying a containerized web application to Amazon Elastic Container Registry (ECR) using Jenkins, Docker, SonarQube, Trivy, and AWS CLI.
 
 
 
-Features
+**Features**
+
 Automated CI/CD pipeline using Jenkins.
 Code quality analysis with SonarQube.
 Security vulnerability scanning with Trivy.
@@ -44,7 +45,9 @@ Credentials for AWS CLI (access_keys and secret_keys).
 AWS CLI configured with proper permissions.
 SonarQube Server running and configured in Jenkins.
 Docker installed on the Jenkins node.
-How to Run the Pipeline
+
+**How to Run the Pipeline**
+
 Clone this repository:
 bash
 Copy
@@ -67,4 +70,5 @@ Web App Deployment to Amazon ECR/
 ├── src/                # Application source code
 └── trivy-scan.txt      # Trivy scan report (generated after pipeline run)
 Outcome
+
 The web application is successfully built, scanned, and pushed to Amazon ECR as a Docker image. The image is tagged with the build number and latest.
