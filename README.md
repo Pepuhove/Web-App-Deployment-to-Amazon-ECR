@@ -1,14 +1,63 @@
-<<<<<<< HEAD
-# React + Vite
+Web App Deployment to Amazon ECR
+This project demonstrates deploying a containerized web application to Amazon Elastic Container Registry (ECR) using Jenkins, Docker, SonarQube, Trivy, and AWS CLI.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
-# Thabang-Artz
-This repository contains the codebase for a stunning portfolio website showcasing the artistry of Thabang Artz. The site highlights the artist's sculptures, creative process, exhibitions, and commission opportunities. Built with  HTML, CSS, JavaScript, React, it provides an engaging platform to explore and connect with the artist's work.
->>>>>>> 0b399ca4f2fd3defeec1e165b49cf35104aeacb0
-# web_app_containerised
+Features
+Automated CI/CD pipeline using Jenkins.
+Code quality analysis with SonarQube.
+Security vulnerability scanning with Trivy.
+Dockerized web application.
+Deployment to AWS ECR.
+Tools & Technologies
+Jenkins: To automate the CI/CD pipeline.
+SonarQube: For static code analysis and quality gate checks.
+Trivy: For security vulnerability scanning of the application.
+Docker: To build and manage container images.
+AWS ECR: To store and manage container images.
+AWS CLI: To interact with AWS services programmatically.
+CI/CD Pipeline Stages
+Git Checkout:
+Pull the source code from the Git repository.
+SonarQube Analysis:
+Analyze the source code for quality issues and enforce quality gates.
+Quality Gate Check:
+Halt the pipeline if the SonarQube quality gate fails.
+NPM Install:
+Install required Node.js dependencies.
+Security Scan:
+Run Trivy to scan the project for vulnerabilities.
+Docker Build:
+Build a Docker image of the application.
+ECR Repository Management:
+Create an Amazon ECR repository if it doesn’t exist.
+ECR Login, Tagging, and Push:
+Authenticate to ECR, tag the image with build numbers, and push it to ECR.
+Cleanup:
+Remove local Docker images to free up Jenkins workspace.
+Prerequisites
+Jenkins installed and configured with:
+JDK, Node.js, and SonarQube Scanner tools.
+Credentials for AWS CLI (access_keys and secret_keys).
+AWS CLI configured with proper permissions.
+SonarQube Server running and configured in Jenkins.
+Docker installed on the Jenkins node.
+How to Run the Pipeline
+Clone this repository:
+bash
+Copy
+Edit
+git clone https://github.com/Pepuhove/web_app_containerised.git
+cd web_app_containerised
+Configure Jenkins with the provided Jenkinsfile.
+Trigger the Jenkins job and monitor the pipeline stages.
+Project Structure
+bash
+Copy
+Edit
+web_app_containerised/
+├── Jenkinsfile         # CI/CD pipeline definition
+├── Dockerfile          # Docker build instructions
+├── package.json        # Node.js dependencies
+├── src/                # Application source code
+└── trivy-scan.txt      # Trivy scan report (generated after pipeline run)
+Outcome
+The web application is successfully built, scanned, and pushed to Amazon ECR as a Docker image. The image is tagged with the build number and latest.
